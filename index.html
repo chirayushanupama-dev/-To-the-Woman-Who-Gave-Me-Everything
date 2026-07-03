@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To The Woman Who Gave Me Everything ❤️</title>
+    <!-- Elegant Luxury Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Fast Global Libraries for Flawless Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+
+    <!-- Dynamic Atmospheric Elements -->
+    <div class="stars-overlay hidden" id="starsLayer"></div>
+    <div class="petal-container" id="petalVoid"></div>
+
+    <!-- MAIN CONTAINER -->
+    <main id="storyWrapper">
+
+        <!-- PAGE 1: WELCOME SCREEN -->
+        <section id="page1" class="page active">
+            <div class="content-box text-center">
+                <div class="welcome-icon">🌸</div>
+                <h1 class="main-heading">This isn't just a website...</h1>
+                <p class="sub-heading">It's a small thank you for the biggest love I've ever received.</p>
+                <button class="btn-rose" onclick="transitionToPage(2)">💐 Begin</button>
+            </div>
+        </section>
+
+        <!-- PAGE 2: THE LETTER -->
+        <section id="page2" class="page">
+            <div class="content-box">
+                <div class="typewriter-frame">
+                    <span id="letterTyped"></span>
+                </div>
+                <div class="text-center">
+                    <button id="btnPage2" class="btn-rose hidden" onclick="transitionToPage(3)">Continue →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PAGE 3: YOUR LOVE (CARDS) -->
+        <section id="page3" class="page">
+            <div class="content-box text-center">
+                <h2 class="section-title">Everything You Are</h2>
+                <div class="cards-container">
+                    <div class="love-card" id="card1">
+                        <span class="card-emoji">🌸</span>
+                        <h3>Your Sacrifices</h3>
+                        <p>"You always chose my happiness before your own."</p>
+                    </div>
+                    <div class="love-card" id="card2">
+                        <span class="card-emoji">💖</span>
+                        <h3>Your Strength</h3>
+                        <p>"Even during difficult times, you kept smiling for me."</p>
+                    </div>
+                    <div class="love-card" id="card3">
+                        <span class="card-emoji">🌟</span>
+                        <h3>Your Love</h3>
+                        <p>"No one will ever love me the way you do."</p>
+                    </div>
+                </div>
+                <button class="btn-rose" onclick="transitionToPage(4)">Next →</button>
+            </div>
+        </section>
+
+        <!-- PAGE 4: MEMORIES GALLERY -->
+        <section id="page4" class="page">
+            <div class="content-box text-center">
+                <h2 class="section-title">Moments of Pure Love</h2>
+                <div class="gallery-grid">
+                    <!-- Swap out the placeholder emojis inside "photo-box" for your real images later! -->
+                    <div class="gallery-item">
+                        <div class="photo-box">📸</div>
+                        <p class="photo-caption">"My first hero."</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="photo-box">🤍</div>
+                        <p class="photo-caption">"The safest place in my life."</p>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="photo-box">✨</div>
+                        <p class="photo-caption">"Every smile of mine has your love behind it."</p>
+                    </div>
+                </div>
+                <button class="btn-rose" onclick="transitionToPage(5)">Continue →</button>
+            </div>
+        </section>
+
+        <!-- PAGE 5: THE PROMISE -->
+        <section id="page5" class="page">
+            <div class="content-box text-center">
+                <div class="glowing-heart" id="pulseHeart">💖</div>
+                <p class="serif-text">"I may not always express it...<br>But every achievement of mine belongs to you."</p>
+                <button class="btn-rose" onclick="transitionToPage(6)">Look Up ✨</button>
+            </div>
+        </section>
+
+        <!-- PAGE 6: FINAL PAGE (STARRY SKY BANNER) -->
+        <section id="page6" class="page">
+            <div class="final-content text-center" id="finalContainer">
+                <div class="final-letter-box">
+                    <h2 class="mom-title">Dear Mom,</h2>
+                    <p class="final-message-text" id="finalVows"></p>
+                </div>
+                <button id="hugBtn" class="btn-rose hidden" onclick="revealHugMessage()">💐 Hug Me</button>
+                <div id="hugAlert" class="hug-popup hidden">If you're reading this, come give me a hug. ❤️</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Calm Piano Track Link -->
+    <audio id="bgMusic" loop src="music/piano.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
